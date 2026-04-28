@@ -6,16 +6,58 @@
 
 int main() {
     // Nível Novato - Movimentação das Peças
+    //Declaração de variaveis 
+    int i = 1, j = 1;
+    int opcao;
 
+    //Menu de Movimentação das Peças
+    printf("# Proxima jogada\n");
+    printf("1 - Bispo\n");
+    printf("2 - Torre\n");
+    printf("3 - Rainha\n");
+    printf("Opção: ");
+    scanf("%d", &opcao);
+
+    switch (opcao)
+    {
     // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-
+    // Mover o Bispo na diagonal 5 casas para cima e à direita usando while.
+    case 1:
+        printf("Você escolheu Bispo!\n");
+        
+        while (i <= 5)
+        {
+            i ++;
+            printf("%d° Casa: ", i);
+            printf("Cima e direita\n");
+        }
+        break;
+    
     // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-
+    // Mover a Torre 5 casas para a direita usando o for
+    case 2: 
+        printf("Você escolheu Torre!\n");
+        
+        for (i = 1; i <= 5; i++)
+        {
+            printf("%d° Casa: ", i);
+            printf("Direita\n");
+        }
+        break;
+    
     // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-
+    // Mover a Rainha oito casas para a esquerda usando do while.
+    case 3:
+        printf("Você escolheu Rainha!\n");
+        
+        do
+        {
+            printf("%d° Casa: ",i);
+            printf("Esquerda\n");
+            i++;
+        } while (i <= 8);
+        
+        break;
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
@@ -26,6 +68,10 @@ int main() {
 
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
-
+    // Caso o usuario digite um número não registrado
+    default:
+        printf("Opção Invalida!");
+        break;
+    }
     return 0;
 }
